@@ -1,6 +1,7 @@
 package ru.itis.dis403.lab_01.config;
 
 import ru.itis.dis403.lab_01.annotation.Component;
+import ru.itis.dis403.lab_01.annotation.Controller;
 
 import java.io.File;
 import java.lang.annotation.Annotation;
@@ -34,13 +35,35 @@ public class PathScan {
         } else if (resource.endsWith(".class")) {
             String className = resource.substring(0, resource.length() - 6);
             try {
-                Class clazz = Class.forName(className);
-                if (clazz.isAnnotationPresent(Component.class)) {
+                Class<?> clazz = Class.forName(className);
+
+                if (isComponent(clazz)) {
                     classes.add(clazz);
                 }
             } catch (ClassNotFoundException ignore) {
             }
+
         }
         return classes;
+    }
+
+    private static boolean isComponent(Class<?> clazz) {
+
+        if (clazz.isAnnotation() || clazz.isInterface()) {
+            return false;
+        }
+
+        if (clazz.isAnnotationPresent(Component.class)) {
+            return true;
+        }
+
+        for (Annotation annotation : clazz.getAnnotations()) {
+            if (annotation.annotationType()
+                    .isAnnotationPresent(Component.class)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

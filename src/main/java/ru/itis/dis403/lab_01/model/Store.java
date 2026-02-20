@@ -1,8 +1,9 @@
 package ru.itis.dis403.lab_01.model;
 
+import ru.itis.dis403.lab_01.annotation.Component;
+
 import java.util.HashMap;
 import java.util.Map;
-
 public class Store {
     private String name;
     private Map<Fruit, Integer> fruits = new HashMap<>();
