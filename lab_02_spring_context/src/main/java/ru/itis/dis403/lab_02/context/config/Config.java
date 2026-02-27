@@ -1,11 +1,10 @@
-package ru.itis.dis403.lab_02.config;
+package ru.itis.dis403.lab_02.context.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
-import ru.itis.dis403.lab_02.components.MarketService;
-import ru.itis.dis403.lab_02.model.Market;
+import ru.itis.dis403.lab_02.context.components.MarketService;
+import ru.itis.dis403.lab_02.context.model.Market;
 
 @Configuration
 @ComponentScan("ru.itis.dis403.lab_02")

@@ -1,4 +1,4 @@
-package ru.itis.dis403.lab_02.context;
+package ru.itis.dis403.lab_02.context.model;
 
 public class ImportProduct {
     private Product product;
