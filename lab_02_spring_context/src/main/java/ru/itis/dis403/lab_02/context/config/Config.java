@@ -9,8 +9,9 @@ import ru.itis.dis403.lab_02.context.model.Market;
 @Configuration
 @ComponentScan("ru.itis.dis403.lab_02")
 public class Config {
+
     @Bean
-    public MarketService marketService() {
+    public MarketService getService() {
         Market market = new Market();
         return new MarketService(market);
     }
