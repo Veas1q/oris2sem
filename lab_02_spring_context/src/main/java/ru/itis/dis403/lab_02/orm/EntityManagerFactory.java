@@ -17,7 +17,7 @@ public class EntityManagerFactory {
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl("jdbc:postgresql://localhost:5432/lab2");
         config.setUsername("postgres");
-        config.setPassword("postgres");
+        config.setPassword("Hepi_pro323");
         config.setConnectionTimeout(50000);
         config.setMaximumPoolSize(10);
         dataSource = new HikariDataSource(config);
