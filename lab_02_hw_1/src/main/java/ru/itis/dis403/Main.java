@@ -15,8 +15,7 @@ public class Main {
         Tomcat tomcat = new Tomcat();
         tomcat.getConnector().setPort(8080);
 
-        String docBase = new File(".").getAbsolutePath();
-        Context ctx = tomcat.addContext("", docBase);
+        Context ctx = tomcat.addContext("", new File(".").getAbsolutePath());
 
         AnnotationConfigWebApplicationContext springContext = new AnnotationConfigWebApplicationContext();
         springContext.register(AppConfig.class);

@@ -21,21 +21,31 @@ public class Main {
         List<Class<?>> entities =
                 EntityScanner.find("ru.itis.dis403.lab_02.orm.model");
 
-        SchemaValidator.validate(connection, entities);
-        // создаём таблицы
 //        SchemaCreator.createTables(connection, entities);
+
+//        SchemaValidator.validate(connection, entities);
 
 
         Country country = new Country();
         country.setName("Россия");
-        country.setId(3L);
 
 
-//        em.save(country);
 
-        em.remove(country);
 
-        System.out.println("Saved");
+        City city = new City();
+        city.setCountry(country);
+        city.setName("Казань");
+        em.save(country);
+        em.save(city);
+
+//        em.remove(country);
+
+        List<City> cities = em.findAll(City.class);
+        for (City c :cities) {
+            System.out.println(c);
+        }
+
+
 
         factory.close();
     }

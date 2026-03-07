@@ -1,4 +1,4 @@
-package org.itis.dis403.model;
+package ru.itis.dis403.model;
 
 import jakarta.persistence.Entity;
 
