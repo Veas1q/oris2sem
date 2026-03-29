@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Тест</title>
+    <title>Тести</title>
 </head>
 <body>
 
