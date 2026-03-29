@@ -11,10 +11,11 @@
         <option value="$PROJECT_DIR$/lab_03/pom.xml" />
         <option value="$PROJECT_DIR$/lab_04/pom.xml" />
         <option value="$PROJECT_DIR$/lab_05_spring_securite/pom.xml" />
+        <option value="$PROJECT_DIR$/lab2_6_spring_security_jwt/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="23" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="24" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
